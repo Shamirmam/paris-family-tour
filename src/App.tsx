@@ -209,21 +209,19 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-2 sm:flex sm:flex-wrap gap-6 md:gap-8 mb-12"
+              className="flex flex-row justify-center items-center gap-4 md:gap-8 mb-12 flex-wrap"
             >
               {[
                 { icon: "😊", text: "Stress-Free" },
                 { icon: "🤝", text: "Local Guides" },
-                { icon: "🪁", text: "Unique and Fun" }
+                { icon: "🧘", text: "Relax" }
               ].map((item, i) => (
-                <div key={i} className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-cream flex items-center justify-center text-xl shadow-sm border border-orange-primary/30 flex-shrink-0">
+                <div key={i} className="flex flex-col items-center justify-center text-center min-w-[90px]">
+                  <div className="w-10 h-10 rounded-full bg-orange-cream flex items-center justify-center text-xl shadow-sm border border-orange-primary/30 mb-2">
                     {item.icon}
                   </div>
                   <span className="font-poppins font-bold text-text-secondary text-xs md:text-sm leading-tight">
-                    {item.text.split(' ').map((word, idx) => (
-                      <span key={idx} className="block">{word}</span>
-                    ))}
+                    {item.text}
                   </span>
                 </div>
               ))}
