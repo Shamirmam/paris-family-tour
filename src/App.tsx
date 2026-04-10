@@ -260,20 +260,7 @@ export default function App() {
               />
             </motion.div>
             
-            {/* Overlapping Foreground Image */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="absolute -bottom-10 -right-4 md:-bottom-16 md:-right-8 w-1/2 md:w-2/3 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-20 aspect-[4/5] border-4 md:border-8 border-white"
-            >
-              <img 
-                src="https://picsum.photos/seed/paris-tour/800/1000" 
-                alt="Tour Guide" 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
+            {/* Overlapping Foreground Image supprimée */}
           </div>
           
         </div>
