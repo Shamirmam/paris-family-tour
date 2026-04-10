@@ -297,7 +297,7 @@ export default function App() {
             {[
               {
                 id: 'signature',
-                image: "https://picsum.photos/seed/paris-signature/800/600",
+                image: "/paris-day.jpg",
                 title: "The Signature Tour: Paris Icons for Families",
                 duration: "3h",
                 type: "Private",
@@ -308,7 +308,7 @@ export default function App() {
               },
               {
                 id: 'night',
-                image: "https://picsum.photos/seed/paris-night/800/600",
+                image: "/paris-night.png",
                 title: "Paris By Night: The City of Lights Sparkle",
                 duration: "2h",
                 type: "Private",
