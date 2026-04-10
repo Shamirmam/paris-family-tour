@@ -253,10 +253,9 @@ export default function App() {
               className="relative rounded-[40px] overflow-hidden shadow-2xl z-10 aspect-[4/3] w-full"
             >
               <img 
-                src="https://picsum.photos/seed/paris-family/1200/900" 
+                src="/paris-family.png" 
                 alt="Family in Paris" 
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </motion.div>
             
@@ -323,10 +322,9 @@ export default function App() {
             {/* Left: Image */}
             <div className="md:w-1/2 h-[250px] md:h-auto overflow-hidden">
               <img 
-                src="https://picsum.photos/seed/paris-notre-dame/1200/1200" 
+                src="/paris-family.png" 
                 alt="Avoid the crowds" 
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             
