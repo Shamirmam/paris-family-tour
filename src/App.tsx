@@ -178,7 +178,7 @@ export default function App() {
       </nav>
 
       {/* 2. HERO SECTION */}
-      <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-white">
+      <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-orange-primary">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column: Content */}
           <div className="relative z-10 flex flex-col items-center text-center">
@@ -186,10 +186,10 @@ export default function App() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-poppins font-black italic text-4xl md:text-7xl mb-4 leading-[0.9] text-text-main uppercase tracking-tighter text-center"
+              className="font-poppins font-black italic text-4xl md:text-7xl mb-4 leading-[0.9] text-white uppercase tracking-tighter text-center"
             >
               LIVE THE <br />
-              <span className="text-orange-primary">PARISIAN</span> <br />
+              <span className="text-white/80">PARISIAN</span> <br />
               EXPERIENCE
             </motion.h1>
             <motion.div
@@ -198,8 +198,8 @@ export default function App() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col items-center justify-center space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4 mb-12 w-full"
             >
-              <p className="font-poppins font-bold text-orange-primary text-xl text-center w-full">Unforgettable Family Tours</p>
-              <div className="h-0.5 w-20 bg-orange-primary hidden md:block"></div>
+              <p className="font-poppins font-bold text-white text-xl text-center w-full">Unforgettable Family Tours</p>
+              <div className="h-0.5 w-20 bg-white/60 hidden md:block"></div>
             </motion.div>
             
             <motion.div 
@@ -214,10 +214,10 @@ export default function App() {
                 { icon: "🧘", text: "Relax" }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center justify-center text-center min-w-[90px]">
-                  <div className="w-10 h-10 rounded-full bg-orange-cream flex items-center justify-center text-xl shadow-sm border border-orange-primary/30 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-xl shadow-sm border border-white/30 mb-2">
                     {item.icon}
                   </div>
-                  <span className="font-poppins font-bold text-text-secondary text-xs md:text-sm leading-tight">
+                  <span className="font-poppins font-bold text-white text-xs md:text-sm leading-tight">
                     {item.text}
                   </span>
                 </div>
@@ -232,7 +232,7 @@ export default function App() {
             >
               <a 
                 href="#contact" 
-                className="inline-flex items-center gradient-main text-white px-10 py-4 rounded-2xl font-nunito font-black text-xl shadow-xl hover:scale-105 transition-transform group"
+                className="inline-flex items-center bg-white text-orange-primary px-10 py-4 rounded-2xl font-nunito font-black text-xl shadow-xl hover:scale-105 transition-transform group border-2 border-white hover:bg-orange-cream hover:text-orange-primary"
               >
                 Book a tour →
               </a>
