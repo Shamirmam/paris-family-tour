@@ -265,7 +265,7 @@ export default function App() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="absolute -bottom-10 -right-4 md:-bottom-16 md:-right-8 w-1/2 md:w-2/3 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-20 aspect-[4/5] border-4 md:border-8 border-white"
+              className="absolute bottom-6 right-6 md:bottom-12 md:right-12 w-1/3 md:w-1/2 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-lg z-20 aspect-[4/5] border-4 md:border-8 border-white"
             >
               <img 
                 src="https://picsum.photos/seed/paris-tour/800/1000" 
@@ -696,89 +696,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* 11. FOOTER */}
-      <footer className="bg-orange-cream py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-6">
-            {[
-              { src: "/paris-day.jpg", alt: "Paris Day" },
-              { src: "/paris-night.png", alt: "Paris Night" },
-              { src: "/logo-pft.png", alt: "Paris Family Tour Logo" },
-              // Ajoute ici d'autres images de Paris si tu en as (ex: /paris-eiffel.jpg, /paris-louvre.jpg, etc.)
-            ].map((img, i) => (
-              <div key={i} className="w-40 h-32 rounded-2xl overflow-hidden bg-white shadow-soft border border-orange-primary/10">
-                <img 
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </footer>
-
-      {/* Floating WhatsApp Button */}
-      <a 
-        href="https://wa.me/33600000000" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 w-16 h-16 bg-orange-primary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50 group"
-      >
-        <MessageCircle className="w-8 h-8" />
-        <span className="absolute right-20 bg-white text-text-main px-4 py-2 rounded-xl shadow-lg font-bold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          Chat with us!
-        </span>
-      </a>
-
-      {/* Tour Highlights Marquee */}
-      <div className="bg-orange-cream py-16 overflow-hidden">
-        <div className="flex space-x-6 animate-marquee whitespace-nowrap">
-          {[
-            { seed: "paris-family-eiffel", alt: "Family at Eiffel Tower" },
-            { seed: "paris-kids-louvre", alt: "Kids at Louvre" },
-            { seed: "paris-family-cafe", alt: "Family at Paris Cafe" },
-            { seed: "paris-family-seine", alt: "Family by the Seine" },
-            { seed: "paris-kids-carousel", alt: "Kids on Carousel" },
-            { seed: "paris-family-montmartre", alt: "Family in Montmartre" },
-            { seed: "paris-kids-crepe", alt: "Kids eating crepes" },
-            { seed: "paris-family-notredame", alt: "Family at Notre Dame" },
-            { seed: "paris-kids-park", alt: "Kids in Tuileries Garden" },
-            { seed: "paris-family-arc", alt: "Family at Arc de Triomphe" }
-          ].map((img, i) => (
-            <div key={i} className="inline-block w-80 h-60 rounded-3xl overflow-hidden bg-white flex-shrink-0 shadow-soft border border-orange-primary/10">
-              <img 
-                src={`https://picsum.photos/seed/${img.seed}/400/300`} 
-                alt={img.alt} 
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          ))}
-          {/* Duplicate for seamless loop */}
-          {[
-            { seed: "paris-family-eiffel", alt: "Family at Eiffel Tower" },
-            { seed: "paris-kids-louvre", alt: "Kids at Louvre" },
-            { seed: "paris-family-cafe", alt: "Family at Paris Cafe" },
-            { seed: "paris-family-seine", alt: "Family by the Seine" },
-            { seed: "paris-kids-carousel", alt: "Kids on Carousel" },
-            { seed: "paris-family-montmartre", alt: "Family in Montmartre" },
-            { seed: "paris-kids-crepe", alt: "Kids eating crepes" },
-            { seed: "paris-family-notredame", alt: "Family at Notre Dame" },
-            { seed: "paris-kids-park", alt: "Kids in Tuileries Garden" },
-            { seed: "paris-family-arc", alt: "Family at Arc de Triomphe" }
-          ].map((img, i) => (
-            <div key={`dup-${i}`} className="inline-block w-80 h-60 rounded-3xl overflow-hidden bg-white flex-shrink-0 shadow-soft border border-orange-primary/10">
-              <img 
-                src={`https://picsum.photos/seed/${img.seed}/400/300`} 
-                alt={img.alt} 
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
 
       <AnimatePresence>
         {selectedTour && (
