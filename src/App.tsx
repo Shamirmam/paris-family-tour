@@ -697,30 +697,23 @@ export default function App() {
       </section>
 
       {/* 11. FOOTER */}
-      <footer className="bg-text-main text-white py-12">
+      <footer className="bg-orange-cream py-12">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
-            <div className="col-span-2 md:col-span-3">
-              <a href="#" className="font-nunito font-black text-3xl text-orange-primary tracking-tight mb-6 block">
-                PARIS FAMILY TOUR
-              </a>
-              <p className="text-white/60 max-w-sm leading-relaxed">
-                The most stress-free way to visit Paris with your family. Private Mercedes tours designed for kids and parents.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-poppins font-bold text-lg mb-6">Quick Links</h4>
-              <ul className="space-y-4 text-white/60">
-                <li><a href="#tours" className="hover:text-orange-primary transition-colors">Tours</a></li>
-                <li><a href="#about" className="hover:text-orange-primary transition-colors">About</a></li>
-                <li><a href="#contact" className="hover:text-orange-primary transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-orange-primary transition-colors">Legal Mentions</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-white/40">
-            <p>© 2026 Paris Family Tour — All rights reserved</p>
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              { src: "/paris-day.jpg", alt: "Paris Day" },
+              { src: "/paris-night.png", alt: "Paris Night" },
+              { src: "/logo-pft.png", alt: "Paris Family Tour Logo" },
+              // Ajoute ici d'autres images de Paris si tu en as (ex: /paris-eiffel.jpg, /paris-louvre.jpg, etc.)
+            ].map((img, i) => (
+              <div key={i} className="w-40 h-32 rounded-2xl overflow-hidden bg-white shadow-soft border border-orange-primary/10">
+                <img 
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </footer>
