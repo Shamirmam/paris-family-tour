@@ -293,7 +293,7 @@ export default function App() {
             TOURS
           </motion.h2>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="flex flex-col items-center md:grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {[
               {
                 id: 'signature',
