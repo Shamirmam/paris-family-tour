@@ -701,8 +701,8 @@ export default function App() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
             <div className="col-span-2 md:col-span-3">
-              <a href="#" className="font-nunito font-black text-3xl text-orange-primary tracking-tight mb-6 block">
-                PARIS FAMILY TOUR
+              <a href="#" className="mb-6 block">
+                <img src="/logo-pft.png" alt="Paris Family Tour Logo" className="h-12 w-auto" />
               </a>
               <p className="text-white/60 max-w-sm leading-relaxed">
                 The most stress-free way to visit Paris with your family. Private Mercedes tours designed for kids and parents.
