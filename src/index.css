@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@700;800;900&family=Poppins:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-nunito: "Nunito", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-dmsans: "DM Sans", sans-serif;
+
+  --color-orange-primary: #F28C28;
+  --color-orange-cream: #FFF6EC;
+  --color-orange-soft: rgba(242, 140, 40, 0.1);
+  --color-orange-pale: rgba(242, 140, 40, 0.2);
+  
+  --color-text-main: #2D2822;
+  --color-text-secondary: #8A8078;
+  
+  --color-bg-main: #FFF6EC;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-dmsans text-text-main bg-bg-main;
+  }
+}
+
+.gradient-main {
+  background: #F28C28;
+}
+
+.gradient-soft {
+  background: #FFF6EC;
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
