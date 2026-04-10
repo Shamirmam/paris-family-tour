@@ -265,7 +265,7 @@ export default function App() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="absolute bottom-6 right-6 md:bottom-12 md:right-12 w-1/3 md:w-1/2 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-lg z-20 aspect-[4/5] border-4 md:border-8 border-white"
+              className="absolute -bottom-10 -right-4 md:-bottom-16 md:-right-8 w-1/2 md:w-2/3 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-20 aspect-[4/5] border-4 md:border-8 border-white"
             >
               <img 
                 src="https://picsum.photos/seed/paris-tour/800/1000" 
@@ -696,6 +696,96 @@ export default function App() {
         </div>
       </section>
 
+      {/* 11. FOOTER */}
+      <footer className="bg-text-main text-white py-12">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
+            <div className="col-span-2 md:col-span-3">
+              <a href="#" className="font-nunito font-black text-3xl text-orange-primary tracking-tight mb-6 block">
+                PARIS FAMILY TOUR
+              </a>
+              <p className="text-white/60 max-w-sm leading-relaxed">
+                The most stress-free way to visit Paris with your family. Private Mercedes tours designed for kids and parents.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-poppins font-bold text-lg mb-6">Quick Links</h4>
+              <ul className="space-y-4 text-white/60">
+                <li><a href="#tours" className="hover:text-orange-primary transition-colors">Tours</a></li>
+                <li><a href="#about" className="hover:text-orange-primary transition-colors">About</a></li>
+                <li><a href="#contact" className="hover:text-orange-primary transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-orange-primary transition-colors">Legal Mentions</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-white/40">
+            <p>© 2026 Paris Family Tour — All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a 
+        href="https://wa.me/33600000000" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 w-16 h-16 bg-orange-primary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50 group"
+      >
+        <MessageCircle className="w-8 h-8" />
+        <span className="absolute right-20 bg-white text-text-main px-4 py-2 rounded-xl shadow-lg font-bold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          Chat with us!
+        </span>
+      </a>
+
+      {/* Tour Highlights Marquee */}
+      <div className="bg-orange-cream py-16 overflow-hidden">
+        <div className="flex space-x-6 animate-marquee whitespace-nowrap">
+          {[
+            { seed: "paris-family-eiffel", alt: "Family at Eiffel Tower" },
+            { seed: "paris-kids-louvre", alt: "Kids at Louvre" },
+            { seed: "paris-family-cafe", alt: "Family at Paris Cafe" },
+            { seed: "paris-family-seine", alt: "Family by the Seine" },
+            { seed: "paris-kids-carousel", alt: "Kids on Carousel" },
+            { seed: "paris-family-montmartre", alt: "Family in Montmartre" },
+            { seed: "paris-kids-crepe", alt: "Kids eating crepes" },
+            { seed: "paris-family-notredame", alt: "Family at Notre Dame" },
+            { seed: "paris-kids-park", alt: "Kids in Tuileries Garden" },
+            { seed: "paris-family-arc", alt: "Family at Arc de Triomphe" }
+          ].map((img, i) => (
+            <div key={i} className="inline-block w-80 h-60 rounded-3xl overflow-hidden bg-white flex-shrink-0 shadow-soft border border-orange-primary/10">
+              <img 
+                src={`https://picsum.photos/seed/${img.seed}/400/300`} 
+                alt={img.alt} 
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          ))}
+          {/* Duplicate for seamless loop */}
+          {[
+            { seed: "paris-family-eiffel", alt: "Family at Eiffel Tower" },
+            { seed: "paris-kids-louvre", alt: "Kids at Louvre" },
+            { seed: "paris-family-cafe", alt: "Family at Paris Cafe" },
+            { seed: "paris-family-seine", alt: "Family by the Seine" },
+            { seed: "paris-kids-carousel", alt: "Kids on Carousel" },
+            { seed: "paris-family-montmartre", alt: "Family in Montmartre" },
+            { seed: "paris-kids-crepe", alt: "Kids eating crepes" },
+            { seed: "paris-family-notredame", alt: "Family at Notre Dame" },
+            { seed: "paris-kids-park", alt: "Kids in Tuileries Garden" },
+            { seed: "paris-family-arc", alt: "Family at Arc de Triomphe" }
+          ].map((img, i) => (
+            <div key={`dup-${i}`} className="inline-block w-80 h-60 rounded-3xl overflow-hidden bg-white flex-shrink-0 shadow-soft border border-orange-primary/10">
+              <img 
+                src={`https://picsum.photos/seed/${img.seed}/400/300`} 
+                alt={img.alt} 
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
       <AnimatePresence>
         {selectedTour && (
