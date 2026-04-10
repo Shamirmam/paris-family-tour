@@ -86,7 +86,7 @@ const TourCard = ({ image, title, duration, type, tag, rating, reviews, price, o
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     onClick={onClick}
-    className="bg-white rounded-3xl shadow-soft overflow-hidden border border-orange-soft hover:shadow-hover transition-all group cursor-pointer"
+    className="bg-white rounded-3xl shadow-soft overflow-hidden border border-orange-soft hover:shadow-hover transition-all group cursor-pointer w-[90vw] max-w-xs sm:w-[340px] sm:max-w-sm md:w-[400px] md:max-w-md"
   >
     <div className="relative aspect-[4/3] overflow-hidden">
       <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer" />
