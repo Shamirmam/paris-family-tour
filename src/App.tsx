@@ -322,7 +322,7 @@ export default function App() {
             {/* Left: Image */}
             <div className="md:w-1/2 h-[250px] md:h-auto overflow-hidden">
               <img 
-                src="/paris-family.png" 
+                src="/paris-libre.jpg" 
                 alt="Avoid the crowds" 
                 className="w-full h-full object-cover"
               />
