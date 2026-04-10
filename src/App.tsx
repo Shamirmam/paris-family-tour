@@ -328,54 +328,6 @@ export default function App() {
               />
             </div>
             
-            {/* Right: Content */}
-            <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center text-orange-cream">
-              <motion.h2 
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="font-poppins font-black italic text-2xl md:text-4xl leading-[0.9] uppercase tracking-tighter mb-4"
-              >
-                AVOID THE <br />
-                CROWDS
-              </motion.h2>
-              
-              <motion.p 
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="text-lg mb-6 font-medium opacity-90 leading-relaxed"
-              >
-                Forget traditional walking tours. Here, you are free: we adapt to your pace and your children. Enjoy Paris from the comfort of your private van, without walking for hours.
-              </motion.p>
-              
-              <div className="space-y-3">
-                {[
-                  "Private Mercedes V-Class",
-                  "No more Metro Nightmare",
-                  "Kid-friendly (No boring lectures)",
-                  "Hassle-free Logistics",
-                  "Flexible & Personalized Pace"
-                ].map((item, i) => (
-                  <motion.div 
-                    key={i}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 + i * 0.1 }}
-                    className="flex items-center space-x-3"
-                  >
-                    <div className="w-5 h-5 rounded-full border border-orange-cream flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3" />
-                    </div>
-                    <span className="font-poppins font-bold text-base md:text-lg">{item}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
