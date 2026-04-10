@@ -157,11 +157,10 @@ export default function App() {
       
       {/* 1. NAVBAR */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'}`}>
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <a href="#" className="flex items-center space-x-2">
-            <img src="/logo-pft.png" alt="Paris Family Tour Logo" className="h-10 md:h-12 w-auto" />
+        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-center md:justify-between items-center">
+          <a href="#" className="flex items-center justify-center space-x-2 w-full md:w-auto mb-2 md:mb-0">
+            <img src="/logo-pft.png" alt="Paris Family Tour Logo" className="h-10 md:h-12 w-auto mx-auto" />
           </a>
-          
           <div className="flex items-center space-x-6">
             <div className="hidden md:flex items-center space-x-8 mr-4">
               {['Tours', 'How it Works', 'Reviews'].map((item) => (
@@ -181,27 +180,25 @@ export default function App() {
       {/* 2. HERO SECTION */}
       <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-white">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-          
           {/* Left Column: Content */}
-          <div className="relative z-10">
+          <div className="relative z-10 flex flex-col items-center text-center">
             <motion.h1 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-poppins font-black italic text-4xl md:text-7xl mb-4 leading-[0.9] text-text-main uppercase tracking-tighter"
+              className="font-poppins font-black italic text-4xl md:text-7xl mb-4 leading-[0.9] text-text-main uppercase tracking-tighter text-center"
             >
               LIVE THE <br />
               <span className="text-orange-primary">PARISIAN</span> <br />
               EXPERIENCE
             </motion.h1>
-            
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-12"
+              className="flex flex-col items-center justify-center space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4 mb-12 w-full"
             >
-              <p className="font-poppins font-bold text-orange-primary text-xl">Unforgettable Family Tours</p>
+              <p className="font-poppins font-bold text-orange-primary text-xl text-center w-full">Unforgettable Family Tours</p>
               <div className="h-0.5 w-20 bg-orange-primary hidden md:block"></div>
             </motion.div>
             
@@ -231,6 +228,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex justify-center w-full"
             >
               <a 
                 href="#contact" 
