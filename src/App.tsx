@@ -805,14 +805,7 @@ export default function App() {
                 </button>
                 <h2 className="font-poppins font-bold text-xl text-text-main">{selectedTour.title}</h2>
               </div>
-              <a 
-                href={`https://wa.me/33600000000?text=I'm interested in the ${selectedTour.title}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-orange-primary text-white px-6 py-2 rounded-xl font-nunito font-black text-sm hover:scale-105 transition-transform"
-              >
-                Book Now
-              </a>
+              {/* Book Now button supprimé */}
             </div>
 
             <div className="container mx-auto px-6 py-12">
@@ -884,12 +877,7 @@ export default function App() {
                         className="relative mb-8 lg:mb-0"
                       >
                         <img src={selectedTour.image} alt={selectedTour.title} className="w-full aspect-video object-cover rounded-3xl shadow-2xl" />
-                        <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-xl max-w-[200px] md:max-w-xs border border-orange-primary/10">
-                          <p className="text-orange-primary font-bold mb-1 md:mb-2 flex items-center text-sm md:text-base">
-                            <Baby className="w-4 h-4 md:w-5 md:h-5 mr-2" /> Safety First
-                          </p>
-                          <p className="text-xs md:text-sm text-text-secondary">Free car seats for all ages (0-10y) pre-installed for your arrival.</p>
-                        </div>
+                        {/* Safety First card supprimée */}
                       </motion.div>
                       
                       <div className="space-y-6 md:space-y-8">
