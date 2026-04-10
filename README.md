@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
@@ -18,3 +19,6 @@ View your app in AI Studio: https://ai.studio/apps/eac32e39-0a2f-4097-8af6-1d7b4
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+=======
+# paris-family-tour
+>>>>>>> 5f5c253ef6e4a36dda275067f4303c80f0038e37
