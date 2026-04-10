@@ -20,7 +20,7 @@ import {
   Wifi, 
   Zap,
   ArrowRight,
-  MessageCircle,
+              <p className="font-poppins font-bold text-white text-xl text-center w-full">Explore Paris in a Private Van While Your Kids Relax</p>
   X
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
