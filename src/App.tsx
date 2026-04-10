@@ -675,54 +675,6 @@ export default function App() {
         </span>
       </a>
 
-      {/* Tour Highlights Marquee */}
-      <div className="bg-orange-cream py-16 overflow-hidden">
-        <div className="flex space-x-6 animate-marquee whitespace-nowrap">
-          {[
-            { seed: "paris-family-eiffel", alt: "Family at Eiffel Tower" },
-            { seed: "paris-kids-louvre", alt: "Kids at Louvre" },
-            { seed: "paris-family-cafe", alt: "Family at Paris Cafe" },
-            { seed: "paris-family-seine", alt: "Family by the Seine" },
-            { seed: "paris-kids-carousel", alt: "Kids on Carousel" },
-            { seed: "paris-family-montmartre", alt: "Family in Montmartre" },
-            { seed: "paris-kids-crepe", alt: "Kids eating crepes" },
-            { seed: "paris-family-notredame", alt: "Family at Notre Dame" },
-            { seed: "paris-kids-park", alt: "Kids in Tuileries Garden" },
-            { seed: "paris-family-arc", alt: "Family at Arc de Triomphe" }
-          ].map((img, i) => (
-            <div key={i} className="inline-block w-80 h-60 rounded-3xl overflow-hidden bg-white flex-shrink-0 shadow-soft border border-orange-primary/10">
-              <img 
-                src={`https://picsum.photos/seed/${img.seed}/400/300`} 
-                alt={img.alt} 
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          ))}
-          {/* Duplicate for seamless loop */}
-          {[
-            { seed: "paris-family-eiffel", alt: "Family at Eiffel Tower" },
-            { seed: "paris-kids-louvre", alt: "Kids at Louvre" },
-            { seed: "paris-family-cafe", alt: "Family at Paris Cafe" },
-            { seed: "paris-family-seine", alt: "Family by the Seine" },
-            { seed: "paris-kids-carousel", alt: "Kids on Carousel" },
-            { seed: "paris-family-montmartre", alt: "Family in Montmartre" },
-            { seed: "paris-kids-crepe", alt: "Kids eating crepes" },
-            { seed: "paris-family-notredame", alt: "Family at Notre Dame" },
-            { seed: "paris-kids-park", alt: "Kids in Tuileries Garden" },
-            { seed: "paris-family-arc", alt: "Family at Arc de Triomphe" }
-          ].map((img, i) => (
-            <div key={`dup-${i}`} className="inline-block w-80 h-60 rounded-3xl overflow-hidden bg-white flex-shrink-0 shadow-soft border border-orange-primary/10">
-              <img 
-                src={`https://picsum.photos/seed/${img.seed}/400/300`} 
-                alt={img.alt} 
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
 
       <AnimatePresence>
         {selectedTour && (
