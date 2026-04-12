@@ -5,7 +5,7 @@
 
 import { useState, useEffect, Fragment } from 'react';
 import { 
-  Camera, 
+                  "Hotel pickup & drop-off",
   Car, 
   Baby, 
   Star, 
@@ -20,7 +20,7 @@ import {
   Wifi, 
   Zap,
   ArrowRight,
-              <p className="font-poppins font-bold text-white text-xl text-center w-full">Explore Paris in a Private Van While Your Kids Relax</p>
+  MessageCircle,
   X
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -198,7 +198,7 @@ export default function App() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col items-center justify-center space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4 mb-12 w-full"
             >
-              <p className="font-poppins font-bold text-white text-xl text-center w-full">Explore Paris in a Private Van While Your Kids Relax</p>
+              <p className="font-poppins font-bold text-white text-xl text-center w-full">Unforgettable Family Tours</p>
               <div className="h-0.5 w-20 bg-white/60 hidden md:block"></div>
             </motion.div>
             
